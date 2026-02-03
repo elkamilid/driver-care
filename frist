@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -785,7 +786,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="swiper">
             <div class="swiper-wrapper">
                 <!-- Slide 1 -->
-                <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80'); background-size: cover; background-position: center;">
+                <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1543215144-3d2954c44b20?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZHJpdmVyJTIwY2FyfGVufDB8fDB8fHww'); background-size: cover; background-position: center;">
                     <div class="slide-content">
                         <h1>Driver Profesional untuk Perjalanan Anda</h1>
                         <p>Layanan driver terpercaya untuk perjalanan dalam dan luar kota</p>
@@ -868,7 +869,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <ul class="pricing-features">
                             <li><i class="fas fa-check"></i> Driver profesional</li>
                             <li><i class="fas fa-check"></i> 4 jam pertama</li>
-                            <li><i class="fas fa-check"></i> Asuransi perjalanan</li>
                             <li><i class="fas fa-check"></i> Bebas parkir tol</li>
                             <li><i class="fas fa-times"></i> Makan driver</li>
                         </ul>
@@ -887,7 +887,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <ul class="pricing-features">
                             <li><i class="fas fa-check"></i> Driver berpengalaman</li>
                             <li><i class="fas fa-check"></i> 8 jam pertama</li>
-                            <li><i class="fas fa-check"></i> Asuransi lengkap</li>
                             <li><i class="fas fa-check"></i> Semua parkir & tol</li>
                             <li><i class="fas fa-check"></i> Makan driver</li>
                         </ul>
@@ -906,7 +905,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <ul class="pricing-features">
                             <li><i class="fas fa-check"></i> Driver premium</li>
                             <li><i class="fas fa-check"></i> 12 jam penuh</li>
-                            <li><i class="fas fa-check"></i> Asuransi super</li>
                             <li><i class="fas fa-check"></i> Semua biaya jalan</li>
                             <li><i class="fas fa-check"></i> Akomodasi driver</li>
                         </ul>
@@ -1097,7 +1095,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <h3>Ikuti Kami</h3>
                     <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
                     <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-                    <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                    <a href="#"><i class="fab fa-tiktok"></i> tiktok</a>
                     <a href="https://wa.me/6281556444412" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
                 </div>
             </div>
