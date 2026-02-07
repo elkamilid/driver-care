@@ -1092,10 +1092,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 
                 <div class="footer-column">
                     <h3>Ikuti Kami</h3>
-                    <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
-                    <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-                    <a href="#"><i class="fab fa-tiktok"></i> tiktok</a>
-                    <a href="https://wa.me/6281556444412" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <a href=https://www.facebook.com/share/1AZczEwKwB/"><i class="fab fa-facebook"></i> Facebook</a>
+                    <a href="https://www.instagram.com/driver_care0k"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="https://www.tiktok.com/@driver.care0k"><i class="fab fa-tiktok"></i> tiktok</a>
+                    <a href="https://www.linkedin.com/in/driver-care" target="_blank"><i class="fab fa-linkedin"></i> linkedin</a>
                 </div>
             </div>
             
@@ -1370,5 +1370,488 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }
         });
     </script>
-</body>
+<!-- START: POPUP DISKON 10% UNTUK PENGGUNA BARU -->
+<style>
+    /* Pop-up Diskon Styles */
+    .popup-diskon-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.85);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+        animation: fadeInPopup 0.4s ease;
+        display: none;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    }
+
+    .popup-diskon-container {
+        background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+        width: 90%;
+        max-width: 500px;
+        border-radius: 25px;
+        padding: 40px 30px;
+        text-align: center;
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+        animation: slideUpPopup 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        position: relative;
+        overflow: hidden;
+        border: 3px solid #FFD700;
+    }
+
+    /* Efek kilau */
+    .popup-diskon-container::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+        transform: rotate(45deg);
+        animation: shine 3s infinite linear;
+    }
+
+    .popup-diskon-ribbon {
+        position: absolute;
+        top: 20px;
+        right: -35px;
+        background: linear-gradient(45deg, #FFD700, #FFA500);
+        color: #8B4513;
+        padding: 10px 45px;
+        transform: rotate(45deg);
+        font-weight: 900;
+        font-size: 14px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        z-index: 2;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    .popup-diskon-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: rgba(255, 255, 255, 0.25);
+        color: white;
+        border: 2px solid white;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 22px;
+        font-weight: bold;
+        transition: all 0.3s;
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .popup-diskon-close:hover {
+        background: rgba(255, 255, 255, 0.4);
+        transform: rotate(180deg) scale(1.1);
+    }
+
+    .popup-diskon-title {
+        color: white;
+        font-size: 32px;
+        margin: 0 0 10px 0;
+        font-weight: 900;
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+        position: relative;
+        z-index: 2;
+    }
+
+    .popup-diskon-subtitle {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 18px;
+        margin-bottom: 25px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .popup-diskon-badge {
+        background: linear-gradient(135deg, #FFD700, #FFA500);
+        color: #8B4513;
+        font-size: 60px;
+        font-weight: 1000;
+        padding: 25px 40px;
+        border-radius: 20px;
+        display: inline-block;
+        margin: 25px 0;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        position: relative;
+        z-index: 2;
+        transform: scale(1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        border: 4px solid white;
+        letter-spacing: 2px;
+    }
+
+    .popup-diskon-badge:hover {
+        transform: scale(1.08) rotate(-2deg);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .popup-diskon-description {
+        color: white;
+        font-size: 18px;
+        margin: 30px 0;
+        line-height: 1.6;
+        position: relative;
+        z-index: 2;
+        background: rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        border-radius: 15px;
+        border-left: 5px solid #FFD700;
+    }
+
+    .popup-diskon-cta {
+        background: linear-gradient(135deg, #2ECC71, #27AE60);
+        color: white;
+        border: none;
+        padding: 22px 50px;
+        font-size: 22px;
+        font-weight: 900;
+        border-radius: 60px;
+        cursor: pointer;
+        transition: all 0.4s;
+        box-shadow: 0 10px 25px rgba(46, 204, 113, 0.5);
+        position: relative;
+        z-index: 2;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        overflow: hidden;
+    }
+
+    .popup-diskon-cta::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+        transition: 0.5s;
+    }
+
+    .popup-diskon-cta:hover {
+        background: linear-gradient(135deg, #27AE60, #219653);
+        transform: translateY(-5px) scale(1.05);
+        box-shadow: 0 15px 35px rgba(46, 204, 113, 0.7);
+    }
+
+    .popup-diskon-cta:hover::before {
+        left: 100%;
+    }
+
+    .popup-diskon-timer {
+        color: #FFD700;
+        font-size: 16px;
+        margin: 30px 0 0 0;
+        font-weight: bold;
+        position: relative;
+        z-index: 2;
+        background: rgba(0, 0, 0, 0.3);
+        padding: 15px;
+        border-radius: 10px;
+        display: inline-block;
+        min-width: 250px;
+    }
+
+    .popup-diskon-timer span {
+        font-size: 28px;
+        font-weight: 900;
+        color: white;
+        background: rgba(255, 107, 107, 0.3);
+        padding: 5px 15px;
+        border-radius: 8px;
+        margin: 0 5px;
+        display: inline-block;
+        min-width: 60px;
+    }
+
+    /* Animations */
+    @keyframes fadeInPopup {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    @keyframes slideUpPopup {
+        from {
+            opacity: 0;
+            transform: translateY(80px) scale(0.9);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    }
+
+    @keyframes shine {
+        0% { transform: rotate(45deg) translateX(-100%); }
+        100% { transform: rotate(45deg) translateX(100%); }
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .popup-diskon-container {
+            padding: 30px 20px;
+            max-width: 90%;
+        }
+        
+        .popup-diskon-title {
+            font-size: 26px;
+        }
+        
+        .popup-diskon-badge {
+            font-size: 45px;
+            padding: 20px 30px;
+        }
+        
+        .popup-diskon-cta {
+            font-size: 18px;
+            padding: 18px 35px;
+        }
+        
+        .popup-diskon-timer span {
+            font-size: 22px;
+            min-width: 50px;
+        }
+        
+        .popup-diskon-ribbon {
+            font-size: 12px;
+            padding: 8px 35px;
+            right: -30px;
+            top: 15px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .popup-diskon-title {
+            font-size: 22px;
+        }
+        
+        .popup-diskon-badge {
+            font-size: 36px;
+            padding: 15px 25px;
+        }
+        
+        .popup-diskon-cta {
+            font-size: 16px;
+            padding: 15px 25px;
+        }
+        
+        .popup-diskon-description {
+            font-size: 16px;
+            padding: 15px;
+        }
+    }
+</style>
+
+<div class="popup-diskon-overlay" id="popupDiskon">
+    <div class="popup-diskon-container">
+        <div class="popup-diskon-ribbon">BARU!</div>
+        <button class="popup-diskon-close" id="closePopupBtn">×</button>
+        
+        <h1 class="popup-diskon-title">🎉 SELAMAT DATANG! 🎉</h1>
+        <p class="popup-diskon-subtitle">Pengguna baru spesial mendapatkan</p>
+        
+        <div class="popup-diskon-badge" id="discountBadge">
+            10% OFF
+        </div>
+        
+        <p class="popup-diskon-description">
+            💝 <strong>DISKON EKSKLUSIF 10%</strong> untuk transaksi pertama Anda!<br>
+            Kode voucher akan diberikan setelah klik tombol di bawah.<br>
+            <em>Berlaku untuk semua paket layanan di website kami.</em>
+        </p>
+        
+        <button class="popup-diskon-cta" id="claimDiscountBtn">
+            <span style="font-size: 24px;">🛒</span> 
+            KLIK DISINI UNTUK DAPATKAN DISKON 10%
+        </button>
+        
+        <div class="popup-diskon-timer">
+            ⏰ WAKTU TERBATAS: <span id="countdownMinutes">03</span>:<span id="countdownSeconds">00</span>
+        </div>
+    </div>
+</div>
+
+<script>
+// ===== KONFIGURASI =====
+const CONFIG = {
+    delayShow: 2000, // Muncul setelah 3 detik
+    countdownTime: 180, // 3 menit (180 detik)
+    discountCode: "WELCOME10",
+    cookieName: "discount_popup_shown",
+    cookieExpiry: 24 // Jam
+};
+
+// ===== VARIABEL =====
+let countdownInterval;
+let timeLeft = CONFIG.countdownTime;
+
+// ===== FUNGSI UTAMA =====
+function showPopup() {
+    const popup = document.getElementById('popupDiskon');
+    if (popup) {
+        popup.style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // Mencegah scroll
+        startCountdown();
+        
+        // Animasi badge
+        const badge = document.getElementById('discountBadge');
+        badge.style.animation = 'pulse 2s infinite';
+    }
+}
+
+function closePopup() {
+    const popup = document.getElementById('popupDiskon');
+    if (popup) {
+        popup.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Kembalikan scroll
+        clearInterval(countdownInterval);
+    }
+}
+
+function claimDiscount() {
+    // Copy kode diskon ke clipboard
+    navigator.clipboard.writeText(CONFIG.discountCode)
+        .then(() => {
+            alert(`🎊 SELAMAT! 🎊\n\nKode diskon Anda: ${CONFIG.discountCode}\n\n✅ Kode telah disalin ke clipboard.\n✅ Gunakan saat checkout.\n✅ Minimal ptransaksi Rp 50.000.\n✅ Berlaku 7 hari ke depan.`);
+        })
+        .catch(() => {
+            alert(`🎊 SELAMAT! 🎊\n\nKode diskon Anda: ${CONFIG.discountCode}\n\nSalin kode di atas dan gunakan saat checkout!\n\n✨ Minimal ptransaksiR p 50.000\n✨ Berlaku 7 hari ke depan`);
+        });
+    
+    // Redirect ke halaman produk atau checkout (opsional)
+    // window.location.href = '/produk';
+    
+    closePopup();
+    setCookie(CONFIG.cookieName, "true", CONFIG.cookieExpiry);
+}
+
+function startCountdown() {
+    const minutesElement = document.getElementById('countdownMinutes');
+    const secondsElement = document.getElementById('countdownSeconds');
+    
+    timeLeft = CONFIG.countdownTime;
+    
+    countdownInterval = setInterval(() => {
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        
+        minutesElement.textContent = minutes.toString().padStart(2, '0');
+        secondsElement.textContent = seconds.toString().padStart(2, '0');
+        
+        // Efek peringatan waktu hampir habis
+        if (timeLeft === 60) {
+            minutesElement.style.color = '#FF6B6B';
+            secondsElement.style.color = '#FF6B6B';
+        }
+        if (timeLeft === 30) {
+            minutesElement.style.animation = 'pulse 0.5s infinite';
+            secondsElement.style.animation = 'pulse 0.5s infinite';
+        }
+        
+        if (timeLeft <= 0) {
+            clearInterval(countdownInterval);
+            minutesElement.textContent = '00';
+            secondsElement.textContent = '00';
+            minutesElement.style.color = '#FF0000';
+            secondsElement.style.color = '#FF0000';
+            
+            // Auto close setelah 5 detik waktu habis
+            setTimeout(closePopup, 5000);
+        }
+        
+        timeLeft--;
+    }, 1000);
+}
+
+// ===== FUNGSI COOKIE =====
+function setCookie(name, value, hours) {
+    const date = new Date();
+    date.setTime(date.getTime() + (hours * 60 * 60 * 1000));
+    const expires = "expires=" + date.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+}
+
+function getCookie(name) {
+    const cookieName = name + "=";
+    const cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+        let cookie = cookies[i].trim();
+        if (cookie.indexOf(cookieName) === 0) {
+            return cookie.substring(cookieName.length, cookie.length);
+        }
+    }
+    return "";
+}
+
+function isPopupAllowed() {
+    // Cek cookie, jika sudah pernah ditampilkan, return false
+    if (getCookie(CONFIG.cookieName) === "true") {
+        return false;
+    }
+    return true;
+}
+
+// ===== EVENT LISTENERS =====
+document.addEventListener('DOMContentLoaded', function() {
+    // Tunggu semua konten selesai load
+    setTimeout(() => {
+        if (isPopupAllowed()) {
+            showPopup();
+        }
+    }, CONFIG.delayShow);
+    
+    // Event listener untuk tombol close
+    document.getElementById('closePopupBtn').addEventListener('click', closePopup);
+    
+    // Event listener untuk tombol claim diskon
+    document.getElementById('claimDiscountBtn').addEventListener('click', claimDiscount);
+    
+    // Close saat klik di luar popup
+    document.getElementById('popupDiskon').addEventListener('click', function(e) {
+        if (e.target === this) {
+            closePopup();
+        }
+    });
+    
+    // Close dengan tombol ESC
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closePopup();
+        }
+    });
+});
+
+// ===== DETEKSI KELUAR HALAMAN (EXIT INTENT) =====
+document.addEventListener('mouseout', function(e) {
+    if (e.clientY < 10 && isPopupAllowed()) {
+        showPopup();
+    }
+});
+
+// ===== UNTUK DEBUGGING =====
+// Hapus cookie untuk testing: setCookie(CONFIG.cookieName, "", -1);
+</script>
+<!-- END: POPUP DISKON 10% UNTUK PENGGUNA BARU --></body>
 </html>
